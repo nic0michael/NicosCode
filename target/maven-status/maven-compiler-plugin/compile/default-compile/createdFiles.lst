@@ -1,0 +1,8 @@
+com/solutions/fluidity/DemetersLargeCar.class
+com/solutions/fluidity/DemetersSmallCar.class
+com/solutions/fluidity/enums/TypeOfFuel.class
+com/solutions/fluidity/enums/TypeOfVehicle.class
+com/solutions/fluidity/DemetersElectricCar.class
+com/solutions/fluidity/Vehicle.class
+com/solutions/fluidity/enums/CargoLimits.class
+com/solutions/fluidity/VehicleStatusPojo.class
