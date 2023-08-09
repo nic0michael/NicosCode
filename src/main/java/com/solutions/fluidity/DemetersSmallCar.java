@@ -4,8 +4,8 @@ import com.solutions.fluidity.enums.CargoLimits;
 import com.solutions.fluidity.enums.TypeOfVehicle;
 
 /**
- * In this class we don't violate the Law of Demeter Also this class has a
- * Single Responsibility to provide "Small Car" behaviour
+ * In this class we don't violate the Law of Demeter
+ * Also this class has a Single Responsibility to provide "Small Car" behaviour
  *
  * @author nickm
  */

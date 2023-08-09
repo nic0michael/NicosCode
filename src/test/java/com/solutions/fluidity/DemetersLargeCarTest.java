@@ -8,22 +8,21 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- *
  * @author nickm
  */
 public class DemetersLargeCarTest {
-  private final int LARGE_CAR =2;
-  private final int SMALL_LOAD =2000;
-  private final int OVERLOADED =50000;
-  DemetersLargeCar car = null;
+  private final int LARGE_CAR = 2;
+  private final int SMALL_LOAD = 2000;
+  private final int OVERLOADED = 50000;
+  Vehicle car = null;
 
   @Test
   @DisplayName("Test 1 testDemetersLargeCarBeingLoaded")
-  public void testDemetersLargeCarBeingLoaded(){
+  public void testDemetersLargeCarBeingLoaded() {
     car = new DemetersLargeCar();
     car.doEverything(SMALL_LOAD);
     int vehicleType = car.getVehicleType();
-    Assertions.assertEquals(LARGE_CAR,vehicleType);
+    Assertions.assertEquals(LARGE_CAR, vehicleType);
 
     VehicleStatusPojo status = car.getStatusPojo();
     Assertions.assertNotNull(status);
@@ -31,14 +30,14 @@ public class DemetersLargeCarTest {
     boolean isVehicleIsOverloaded = status.isVehicleIsOverloaded();
     assertFalse(isVehicleIsOverloaded);
 
-    int cargoKgs= status.getCargoKgs();
-    Assertions.assertEquals(SMALL_LOAD,cargoKgs);
+    int cargoKgs = status.getCargoKgs();
+    Assertions.assertEquals(SMALL_LOAD, cargoKgs);
 
   }
 
   @Test
   @DisplayName("Test 2 testDemetersLargeCarOilIsChanged")
-  public void testDemetersLargeCarOilIsChanged(){
+  public void testDemetersLargeCarOilIsChanged() {
     car = new DemetersLargeCar();
     car.doEverything(SMALL_LOAD);
 
@@ -50,7 +49,7 @@ public class DemetersLargeCarTest {
 
   @Test
   @DisplayName("Test 3 testDemetersLargeCarFilledUpWithPetrol")
-  public void testDemetersLargeCarFilledUpWithPetrol(){
+  public void testDemetersLargeCarFilledUpWithPetrol() {
     car = new DemetersLargeCar();
     car.doEverything(SMALL_LOAD);
     VehicleStatusPojo status = car.getStatusPojo();
@@ -61,7 +60,7 @@ public class DemetersLargeCarTest {
 
   @Test
   @DisplayName("Test 4 testDemetersLargeCarBeingDriven")
-  public void testDemetersLargeCarBeingDriven(){
+  public void testDemetersLargeCarBeingDriven() {
     car = new DemetersLargeCar();
     car.doEverything(SMALL_LOAD);
     VehicleStatusPojo status = car.getStatusPojo();
@@ -72,7 +71,7 @@ public class DemetersLargeCarTest {
 
   @Test
   @DisplayName("Test 5 testDemetersLargeCarBeingOverloaded")
-  public void testDemetersLargeCarBeingOverloaded(){
+  public void testDemetersLargeCarBeingOverloaded() {
     car = new DemetersLargeCar();
     car.doEverything(OVERLOADED);
     int vehicleType = car.getVehicleType();
@@ -83,7 +82,7 @@ public class DemetersLargeCarTest {
     boolean isVehicleIsOverloaded = status.isVehicleIsOverloaded();
     assertTrue(isVehicleIsOverloaded);
 
-    int cargoKgs= status.getCargoKgs();
-    Assertions.assertEquals(OVERLOADED,cargoKgs);
+    int cargoKgs = status.getCargoKgs();
+    Assertions.assertEquals(OVERLOADED, cargoKgs);
   }
 }
